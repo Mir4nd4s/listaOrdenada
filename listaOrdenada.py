@@ -25,7 +25,7 @@ while opcao != "0":
 
         bubble_sort(restaurantes)
 
-        print('# Melhores Restaurantes #')
+        print('\n# Melhores Restaurantes #')
         for item in restaurantes:
             print(item)
 
@@ -41,7 +41,7 @@ while opcao != "0":
 
         bubble_sort(pizzaria)
         
-        print('# Melhores Pizzarias #')
+        print('\n# Melhores Pizzarias #')
         for item in pizzaria:
             print(item)
 
