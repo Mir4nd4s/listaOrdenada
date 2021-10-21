@@ -1,12 +1,3 @@
-def bubble_sort(lista):
-	for i in range(0,len(lista)-1):
-		for j in range(len(lista)-1):  
-			if(lista[j]>lista[j+1]):  
-				temp = lista[j]  
-				lista[j] = lista[j+1]  
-				lista[j+1] = temp  
-	return lista 
-
 opcao = ""
 
 while opcao != "0":
@@ -16,34 +7,36 @@ while opcao != "0":
     opcao = input("\nDigite o número da opção desejada: ")
 
     if opcao == "1":
-        restaurantes = [['china in box', 4.5, 0.9],
-					   ['ragazzo', 3.9, 1.2],
-					   ['mama italia', 4.5, 1.9],
-					   ['nippon', 4.0, 0.7], 
-					   ['spettus', 3.2, 1.4], 
-					   ['forneria', 4.0, 0.2]]
+        restaurantes = [[4.5, 'china in box', 0.9],
+					   [3.9, 'ragazzo', 1.2],
+					   [4.5, 'mama italia', 1.9],
+					   [4.0, 'nippon', 0.7], 
+					   [3.2, 'spettus', 1.4], 
+					   [4.0, 'forneria', 0.2]]
 
-        bubble_sort(restaurantes)
+        restaurantes.sort(reverse=True)
 
         print('\n# Melhores Restaurantes #')
         for item in restaurantes:
-            print(item)
+            print(item[1], '\navaliação ★ {} \ndistancia: {}km\n____________________' 
+				  .format(item[0],item[2]))
 
         print("\n ************ FIM! ************ \n")
 
     if opcao == "2":
-        pizzaria = [['di matteo', 4.5, 0.9],
-					['pizza hut"s', 3.9, 1.2],
-					['massarella', 4.5, 1.9],
-					['tradição', 4.0, 0.7], 
-					['capitão gancho', 3.2, 1.4], 
-					['a fábrica', 4.0, 0.2]]
+        pizzaria = [[4.5, 'di matteo', 0.9],
+					[3.9, 'pizza hut"s', 1.2],
+					[3.0, 'massarella', 1.9],
+					[4.0, 'tradição', 0.7], 
+					[3.2, 'capitão gancho', 1.4], 
+					[4.0, 'a fábrica', 0.2]]
 
-        bubble_sort(pizzaria)
+        pizzaria.sort(reverse=True)
         
         print('\n# Melhores Pizzarias #')
         for item in pizzaria:
-            print(item)
+            print(item[1], '\navaliação ★ {} \ndistancia: {}km\n____________________' 
+				  .format(item[0],item[2]))
 
         print("\n ************ FIM! ************ \n")
 
