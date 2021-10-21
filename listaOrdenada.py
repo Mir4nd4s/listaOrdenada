@@ -7,8 +7,6 @@ def bubble_sort(lista):
 				lista[j+1] = temp  
 	return lista 
 
-
-
 opcao = ""
 
 while opcao != "0":
@@ -31,7 +29,6 @@ while opcao != "0":
         for item in restaurantes:
             print(item)
 
-
         print("\n ************ FIM! ************ \n")
 
     if opcao == "2":
@@ -41,7 +38,6 @@ while opcao != "0":
 					['tradição', 4.0, 0.7], 
 					['capitão gancho', 3.2, 1.4], 
 					['a fábrica', 4.0, 0.2]]
-
 
         bubble_sort(pizzaria)
         
