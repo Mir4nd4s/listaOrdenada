@@ -1,3 +1,10 @@
+def imprimir(impressao):
+  for item in impressao:
+    print(item[1], '\navaliação ★ {} \ndistancia: {}km\n____________________' 
+				  .format(item[0],item[2]))
+
+    print("\n ************ FIM! ************ \n")
+
 opcao = ""
 
 while opcao != "0":
@@ -17,12 +24,8 @@ while opcao != "0":
         restaurantes.sort(reverse=True)
 
         print('\n# Melhores Restaurantes #')
-        for item in restaurantes:
-            print(item[1], '\navaliação ★ {} \ndistancia: {}km\n____________________' 
-				  .format(item[0],item[2]))
-
-        print("\n ************ FIM! ************ \n")
-
+        imprimir(restaurantes)
+      
     if opcao == "2":
         pizzaria = [[4.5, 'di matteo', 0.9],
 					[3.9, 'pizza hut"s', 1.2],
@@ -34,11 +37,7 @@ while opcao != "0":
         pizzaria.sort(reverse=True)
         
         print('\n# Melhores Pizzarias #')
-        for item in pizzaria:
-            print(item[1], '\navaliação ★ {} \ndistancia: {}km\n____________________' 
-				  .format(item[0],item[2]))
-
-        print("\n ************ FIM! ************ \n")
+        imprimir(pizzaria)
 
     elif opcao > "2" or opcao < "0":
         print("\n *** Opção inválida... Tente novamente! ***\n")
